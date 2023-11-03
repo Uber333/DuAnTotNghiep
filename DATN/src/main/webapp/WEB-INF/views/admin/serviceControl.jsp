@@ -18,7 +18,7 @@
 								Service Control <a href="/admin/service"
 									class="btn btn-success float-right">Service List</a>
 							</h3>
-							<div class="bg-success text-light px-3">${message }</div>
+							<div class="bg-success text-light px-3">${message}</div>
 						</div>
 						<div class="card-body">
 							<div class="col row">
@@ -77,14 +77,79 @@
 
 						</div>
 						<div class="card-footer text-muted">
-							<button type="submit" class="btn btn-primary "
-								formaction="/admin/service/create">Insert</button>
-							<button type="submit" class="btn btn-warning"
-								formaction="/admin/service/update">Update</button>
-							<button type="submit" class="btn btn-danger"
-								formaction="/admin/service/delete/${items.id}">Delete</button>
+							<button type="button" class="btn btn-primary "
+								data-toggle="modal" data-target="#exampleModalIns">Insert</button>
+							<button type="button" class="btn btn-warning"
+								data-toggle="modal" data-target="#exampleModalUp">Update</button>
+							<button type="button" class="btn btn-danger"
+								data-toggle="modal" data-target="#exampleModalDel">Delete</button>
 							<button type="submit" class="btn btn-success"
 								formaction="/admin/serviceControl">Reset</button>
+						</div>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModalUp" tabindex="-1"
+							role="dialog" aria-labelledby="exampleModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+										<button type="button" class="close" data-dismiss="modal"
+											aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">Xác nhận Cập nhật?</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary"
+											data-dismiss="modal">No</button>
+										<button type="submit" class="btn btn-primary" formaction="/admin/service/update" >Yes</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal fade" id="exampleModalIns" tabindex="-1"
+							role="dialog" aria-labelledby="exampleModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+										<button type="button" class="close" data-dismiss="modal"
+											aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">Xác nhận Thêm?</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary"
+											data-dismiss="modal">No</button>
+										<button type="submit" class="btn btn-primary" formaction="/admin/service/create" >Yes</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal fade" id="exampleModalDel" tabindex="-1"
+							role="dialog" aria-labelledby="exampleModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+										<button type="button" class="close" data-dismiss="modal"
+											aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">Xác nhận Xóa?</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary"
+											data-dismiss="modal">No</button>
+										<button type="submit" class="btn btn-primary" formaction="/admin/service/create" >Yes</button>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</form:form>

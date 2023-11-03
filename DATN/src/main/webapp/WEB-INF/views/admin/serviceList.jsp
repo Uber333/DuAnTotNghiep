@@ -38,10 +38,6 @@
 									<a class='btn btn-warning btn-xs' style="font-size: 14px" href="service/edit/${item.id}"> 
 									<span class="glyphicon glyphicon-edit"></span> <i class="bi bi-pencil-square"></i>	</a> 
 								</a>
-								<a href="service/delete/${item.id}"
-									style="font-size: 14px" class="btn btn-danger btn-xs"> <span
-										class="glyphicon glyphicon-remove"></span> Delete
-								</a>
 								</td>
 							</tr>
 						</c:forEach>
