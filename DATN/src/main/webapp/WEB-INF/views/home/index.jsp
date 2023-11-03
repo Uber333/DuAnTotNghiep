@@ -51,26 +51,25 @@
                 <div class="col-lg-10 offset-lg-1">
                     <div class="filter-control">
                         <ul>
-                            <li class="active">Hot Laptop</li>
+                            <li class="active">Top Service</li>
                         </ul>
                     </div>
                     <div class="product-slider owl-carousel">
                     <c:forEach var="item" items="${topList.content}">
                         <div class="product-item">
                             <div class="pi-pic">
-                                <img style="width: 80%; height: 10rem;" src="${item.product.image}" alt="">
-                                <div class="sale">Sale</div>
+                                <img style="width: 80%; height: 10rem;" src="${item.service.image}" alt="">
                                 <ul>
-                                    <li class="w-icon active"><a href="/home/cart/add/${item.product.id}"><i class="icon_cart_alt"></i></a></li>
-                                    <li class="quick-view"><a href="product/detail/${item.product.id}">+ Quick View</a></li>
+                                    <li class="w-icon active"><a href="/home/cart/add/${item.service.id}"><i class="icon_cart_alt"></i></a></li>
+                                    <li class="quick-view"><a href="product/detail/${item.service.id}">+ Quick View</a></li>
                                 </ul>
                             </div>
                             <div class="pi-text">
                                 <a href="#">
-                                    <h5>${item.product.name}</h5>
+                                    <h5>${item.service.name}</h5>
                                 </a>
                                 <div class="product-price">
-                                    ${item.product.price}$
+                                    ${item.service.price}$
                                 </div>
                             </div>
                         </div>
