@@ -58,6 +58,13 @@
 										<small id="statusHid" class="form-text text-muted">Service
 											Status is invalid</small>
 									</div>
+									<div class="form-group">
+										<form:textarea type="descripsion" class="form-control" id="descripsion"
+											path="descripsion" aria-describedby="descripsionHid"
+											placeholder="Status" />
+										<small id="statusHid" class="form-text text-muted">Service
+											Descripsion is invalid</small>
+									</div>
 									
 								</div>
 							</div>

@@ -22,6 +22,7 @@
 							<th style="font-weight: bolder; font-size: 18px">Price</th>
 							<th style="font-weight: bolder; font-size: 18px">Time</th>
 							<th style="font-weight: bolder; font-size: 18px">Status</th>
+							<th style="font-weight: bolder; font-size: 18px">Descripsion</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -32,6 +33,7 @@
 								<td>${item.price}</td>
 								<td>${item.time}</td>
 								<td>${item.status}</td>
+								<td>${item.descripsion}</td>
 								<td> 
 									<a class='btn btn-warning btn-xs' style="font-size: 14px" href="service/edit/${item.id}"> 
 									<span class="glyphicon glyphicon-edit"></span> <i class="bi bi-pencil-square"></i>	</a> 
