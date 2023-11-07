@@ -18,9 +18,10 @@
 								Service Control <a href="/admin/service"
 									class="btn btn-success float-right">Service List</a>
 							</h3>
-							<div class="bg-success text-light px-3">${message}</div>
+							
 						</div>
 						<div class="card-body">
+						<div class="bg-success text-light px-3">${message}</div>
 							<div class="col row">
 								<div class="col-6">
 									<div class="form-group">

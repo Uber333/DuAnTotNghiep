@@ -54,12 +54,14 @@ public class ServiceController {
 		model.addAttribute("items", items);
 		Service item = dao.findById(id).get();
 		model.addAttribute("item", item);
+		
 		return "admin/serviceControl";
 	}
 	
 	@RequestMapping("/service/create")
 	public String create(Service item, Model model) {
 		dao.save(item);
+		model.addAttribute("message", "Thêm thành công");
 		return "redirect:/admin/serviceControl";
 	}
 	
@@ -70,8 +72,9 @@ public class ServiceController {
 	}
 	
 	@RequestMapping("/service/update")
-	public String update(Service item) {
+	public String update(Service item, Model model) {
 		dao.save(item);
+		
 		return "redirect:/admin/service/edit/" + item.getId();
 	}
 
