@@ -14,7 +14,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
 import edu.poly.utils.CookieService;
 import edu.poly.utils.ParamService;
 import edu.poly.utils.SessionService;
@@ -24,18 +23,18 @@ import edu.poly.utils.SessionService;
 @RequestMapping("home")
 public class HomeController {
 	
+	@Autowired
+	CookieService cookieService;
+	@Autowired
+	ParamService paramService;
+	@Autowired
+	SessionService sessionService;
+
+	
 	
 	// show index
 	@RequestMapping("index")
-	public String shop(Model model) {
-		
+	public String shop() {	
 		return "home/index";
 	}
-//	
-//	@RequestMapping("/report/inventory-by-category")
-//	public String inventory(Model model) {
-//		List<Report> items = dao.getInventoryByCategory();
-//		model.addAttribute("items", items);
-//		return "report/inventory-by-category";
-//	}
 }

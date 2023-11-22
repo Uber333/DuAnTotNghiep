@@ -2,7 +2,219 @@
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!-- Slideshow -->
-    <section class="page-wrapper">
+    <!-- Loading ......... -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <img src="./imgs/loader.svg" alt="Loader" class="loader-img">
+        </div>
+    </div>
+
+    <!-- overlay for focus -->
+    <div id="overlay" style="display: none;"></div>
+
+    <!-- scroll top -->
+    <a class="scroll-top link-text" href="#home">Top</a>
+
+    <!-- page wrapper -->
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header id="home">
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-xl navbar-dark">
+                <!-- logo site -->
+                <a class="navbar-brand main-logo" href="index.html" rel="home" title="Natuspa">
+                    <img src="./imgs/logo_white.png" alt="Natuspa Logo" width="193" height="76">
+                </a>
+                <!--  main nav -->
+                <button class="navbar-toggler mobile-nav-icon" type="button" data-toggle="collapse"
+                    data-target="#main-nav-mobile">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse main-nav">
+                    <ul class="navbar-nav menu" id="mainNav">
+                        <li class="nav-item menu-item menu-item-current menu-item-has-child">
+                            <a class="nav-link">Home</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="index.html">Home One</a>
+                                </li>
+                                <li>
+                                    <a href="home-two.html">Home Two</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link" href="contact-us.html">Contact</a>
+                        </li>
+                        <li class="nav-item menu-item menu-item-has-child">
+                            <a class="nav-link" href="#">News</a>
+                            <ul class="sub-menu">
+                                <li><a href="page-blog.html">Blog Grid</a></li>
+                                <li><a href="page-blog-details.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link" href="page-pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link" href="about-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item menu-item menu-item-has-child">
+                            <a class="nav-link" href="#">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="page-404.html">Error Page</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- nav icon -->
+                <div class="main-nav-icon">
+                    <!-- search -->
+                    <a class="search-button">
+                        <span class="search-icon nav-icon"><i class="fal fa-search"></i></span>
+                    </a>
+                    <div class="search-form">
+                        <span class="close-search"><i class="fal fa-times-circle"></i></span>
+                        <form class="search-input" action="#">
+                            <input type="text" name="search" id="searchForm" placeholder="Type and hit enter..."
+                                autocomplete="off">
+                        </form>
+                    </div>
+                    <!-- shopping bag -->
+                    <a class="bag-button">
+                        <span class="bag-icon nav-icon">
+                            <i class="fal fa-shopping-bag"><span class="badge badge-danger">2</span></i>
+                        </span>
+                        <div class="shop-cart">
+                            <div class="shop-cart-item">
+                                <img src="./imgs/products/product-1.jpg" alt="product-1">
+                                <p class="product-info">
+                                    The Ordinary Coverage Foundation<br>
+                                    <span class="quantity">1 ×
+                                        <span class="amount">$<span class="price">215.00</span></span>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="shop-cart-item">
+                                <img src="./imgs/products/product-2.jpg" alt="product-2">
+                                <p class="product-info">
+                                    SkinStore Holiday Collection<br>
+                                    <span class="quantity">5 ×
+                                        <span class="amount">$<span class="price">75.99</span></span>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="shop-cart-total">
+                                <strong>Subtotal: </strong><span>$594.95</span>
+                            </div>
+                            <div class="shop-cart-button">
+                                <a href="#" class="btn view-btn">view cart</a>
+                                <a href="#" class="btn checkout-btn">checkout</a>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- bars icon -->
+                    <a class="slide-icon">
+                        <span class="bars-icon nav-icon"><i class="fal fa-bars"></i></span>
+                    </a>
+                </div>
+            </nav>
+            <!-- menu popup -->
+            <div class="menu-popup">
+                <span class="close-icon"><i class="fal fa-times"></i></span>
+                <div class="content-wrap">
+                    <h1 class="title">Natuspa</h1>
+                    <p class="text">
+                        For us, it’s been about a journey, not a race to build a legacy and reputation of being the
+                        best,
+                        delivering the best and creating a Natuspa culture that we are proud of each and every day.
+                    </p>
+                    <span class="menu-popup-img"><img src="./imgs/summer-sale.jpg" alt="Sale"></span>
+                    <div class="contact-popup-info">
+                        <h2 class="title">Contact Us</h2>
+                        <div class="address">
+                            <span>145 Franklin St, Redpoint Eval</span>
+                        </div>
+                        <div class="email">
+                            <span>Natuspa@email-themes.com</span>
+                        </div>
+                        <div class="phone">
+                            <span>+84 933 1235 113</span>
+                        </div>
+                        <div class="social-media-icons">
+                            <div class="social-media">
+                                <a class="social-popup-icon" target="_blank" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a class="social-popup-icon" target="_blank" href="https://fb.com/Tuannguyentn2504"><i
+                                        class="fab fa-facebook-f"></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a class="social-popup-icon" target="_blank" href="#"><i
+                                        class="fab fa-twitter"></i></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a class="social-popup-icon" target="_blank" href="#"><i
+                                        class="fab fa-google-plus-g"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- slides -->
+            <div class="slide-wrap">
+                <div class="slide-inner">
+                    <div class="slide-item active">
+                        <img src="./imgs/slide_1.jpg" alt="slide one">
+                        <div class="slide-text">
+                            <h3>Welcome to Natuspa !</h3>
+                            <h1>BE YOUR BEST</h1>
+                            <p>Enter a relaxing atmosphere of comfort. Natuspa is a peaceful refuge from your
+                                complicated
+                                and
+                                high stress lifestyle. leave feeling refreshed, beautiful, and more relaxed than ever.
+                            </p>
+                            <button class="btn book-now-btn">book now</button>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <img src="./imgs/slide_2.jpg" alt="slide two">
+                        <div class="slide-text" style="text-align: left;">
+                            <h3>Welcome to Natuspa !</h3>
+                            <h1>BE YOUR BEST</h1>
+                            <p>You deserve a break. discover again what it means to be at ease, feel better & enjoy the
+                                long
+                                lasting benefits of the spavia experience.
+                            </p>
+                            <button class="btn book-now-btn">book now</button>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <img src="./imgs/slide_3.jpg" alt="slide three">
+                        <div class="slide-text" style="text-align: right;">
+                            <h3>Welcome to Natuspa !</h3>
+                            <h1>BE YOUR BEST</h1>
+                            <p>set aside the chaos of your daily routines and make time for yourself let the spavia team
+                                recharge and refocus your body and mind.
+                            </p>
+                            <button class="btn book-now-btn">book now</button>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="slide-control" id="prev-slide"></a>
+                <a href="#" class="slide-control" id="next-slide"></a>
+                <ol class="slide-dot">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+        </header>
+
         <!-- service section -->
         <div class="services-section container" id="services">
             <div class="row">
@@ -100,7 +312,7 @@
                     <p class="text-box">September 25, 2005, Natuspa opened its doors with a mission and vision of making
                         a
                         positive difference in the world one guest at a time and delivering an exceptional our guests
-                        couldnât live without. for us, itâs been about a journey, not a race to build a legacy and
+                        couldn’t live without. for us, it’s been about a journey, not a race to build a legacy and
                         reputation of being the best, delivering the best and creating a Natuspa culture that we are
                         proud
                         of each and every day. we are humbled and grateful for the opportunity to open our doors each
@@ -125,43 +337,43 @@
             <blockquote>
                 <div class="slick-slide-cite">
                     <p>
-                        Iâve been coming here for over 10 years and the service is on point. The staff is very
-                        professional and know what theyâre doing. If you want to go somewhere that is actually relaxing,
+                        I’ve been coming here for over 10 years and the service is on point. The staff is very
+                        professional and know what they’re doing. If you want to go somewhere that is actually relaxing,
                         come
                         here!
                     </p>
                     <p>
-                        Iâve been coming here for over 10 years and the service is on point. The staff is very
-                        professional and know what theyâre doing. If you want to go somewhere that is actually relaxing,
+                        I’ve been coming here for over 10 years and the service is on point. The staff is very
+                        professional and know what they’re doing. If you want to go somewhere that is actually relaxing,
                         come
                         here!
                     </p>
                     <p>
-                        Iâve been coming here for over 10 years and the service is on point. The staff is very
-                        professional and know what theyâre doing. If you want to go somewhere that is actually relaxing,
+                        I’ve been coming here for over 10 years and the service is on point. The staff is very
+                        professional and know what they’re doing. If you want to go somewhere that is actually relaxing,
                         come
                         here!
                     </p>
                     <p>
-                        Iâve been coming here for over 10 years and the service is on point. The staff is very
-                        professional and know what theyâre doing. If you want to go somewhere that is actually relaxing,
+                        I’ve been coming here for over 10 years and the service is on point. The staff is very
+                        professional and know what they’re doing. If you want to go somewhere that is actually relaxing,
                         come
                         here!
                     </p>
                     <p>
-                        Iâve been coming here for over 10 years and the service is on point. The staff is very
-                        professional and know what theyâre doing. If you want to go somewhere that is actually relaxing,
+                        I’ve been coming here for over 10 years and the service is on point. The staff is very
+                        professional and know what they’re doing. If you want to go somewhere that is actually relaxing,
                         come
                         here!
                     </p>
                 </div>
                 <div class="slick-slide-figure-img">
-                    <div><img src="/forUser/imgs/testimonials/1.png" alt="customer"></div>
-                    <div><img src="/forUser/imgs/testimonials/2.png" alt="customer"></div>
-                    <div><img src="/forUser/imgs/testimonials/3.png" alt="customer"></div>
-                    <div><img src="/forUser/imgs/testimonials/1.png" alt="customer"></div>
-                    <div><img src="/forUser/imgs/testimonials/5.png" alt="customer"></div>
-                    <div><img src="/forUser/imgs/testimonials/4.png" alt="customer"></div>
+                    <div><img src="./imgs/testimonials/1.png" alt="customer"></div>
+                    <div><img src="./imgs/testimonials/2.png" alt="customer"></div>
+                    <div><img src="./imgs/testimonials/3.png" alt="customer"></div>
+                    <div><img src="./imgs/testimonials/1.png" alt="customer"></div>
+                    <div><img src="./imgs/testimonials/5.png" alt="customer"></div>
+                    <div><img src="./imgs/testimonials/4.png" alt="customer"></div>
                 </div>
                 <div class="slick-slide-figure-info">
                     <div class="infomation">
@@ -344,20 +556,20 @@
 
         <!-- collection section -->
         <div class="collection">
-            <a href="/forUser/imgs/collection/gallery-1.jpg" class="collect-item">
-                <img src="/forUser/imgs/collection/gallery-1.jpg" alt="Gallery-1" class="collect-img" id="gallery-1">
+            <a href="./imgs/collection/gallery-1.jpg" class="collect-item">
+                <img src="./imgs/collection/gallery-1.jpg" alt="Gallery-1" class="collect-img" id="gallery-1">
                 <span class="plus-icon"><i class="fal fa-plus"></i></span>
             </a>
-            <a href="/forUser/imgs/collection/gallery-2.jpg" class="collect-item">
-                <img src="/forUser/imgs/collection/gallery-2.jpg" alt="Gallery-2" class="collect-img" id="gallery-2">
+            <a href="./imgs/collection/gallery-2.jpg" class="collect-item">
+                <img src="./imgs/collection/gallery-2.jpg" alt="Gallery-2" class="collect-img" id="gallery-2">
                 <span class="plus-icon"><i class="fal fa-plus"></i></span>
             </a>
-            <a href="/forUser/imgs/collection/gallery-3.jpg" class="collect-item">
-                <img src="/forUser/imgs/collection/gallery-3.jpg" alt="Gallery-3" class="collect-img" id="gallery-3">
+            <a href="./imgs/collection/gallery-3.jpg" class="collect-item">
+                <img src="./imgs/collection/gallery-3.jpg" alt="Gallery-3" class="collect-img" id="gallery-3">
                 <span class="plus-icon"><i class="fal fa-plus"></i></span>
             </a>
-            <a href="/forUser/imgs/collection/gallery-4.jpg" class="collect-item">
-                <img src="/forUser/imgs/collection/gallery-4.jpg" alt="Gallery-4" class="collect-img" id="gallery-4">
+            <a href="./imgs/collection/gallery-4.jpg" class="collect-item">
+                <img src="./imgs/collection/gallery-4.jpg" alt="Gallery-4" class="collect-img" id="gallery-4">
                 <span class="plus-icon"><i class="fal fa-plus"></i></span>
             </a>
         </div>
@@ -466,7 +678,7 @@
             <div class="spacer-clearfix" style="height: 65px;"></div>
             <div class="team-slider">
                 <div class="team-item">
-                    <img src="/forUser/imgs/team/person-1-370x450.jpg" alt="Person-1">
+                    <img src="./imgs/team/person-1-370x450.jpg" alt="Person-1">
                     <div class="infomation">
                         <h4 class="name">Emille Jenifer</h4>
                         <div class="position">Massagist</div>
@@ -490,7 +702,7 @@
                     </ul>
                 </div>
                 <div class="team-item">
-                    <img src="/forUser/imgs/team/person-2-370x450.jpg" alt="Person-2">
+                    <img src="./imgs/team/person-2-370x450.jpg" alt="Person-2">
                     <div class="infomation">
                         <h4 class="name">Marsha Hoffman</h4>
                         <div class="position">makeup expert</div>
@@ -514,7 +726,7 @@
                     </ul>
                 </div>
                 <div class="team-item">
-                    <img src="/forUser/imgs/team/person-3-370x450.jpg" alt="Person-3">
+                    <img src="./imgs/team/person-3-370x450.jpg" alt="Person-3">
                     <div class="infomation">
                         <h4 class="name">Emille Jenifer</h4>
                         <div class="position">Massagist</div>
@@ -563,12 +775,12 @@
                                     <span>29 <br> DEC</span>
                                 </span>
                                 <div class="post-category">massage</div>
-                                <a href="#" class="post-title">So Youâre Scared of Getting a Massage?</a>
+                                <a href="#" class="post-title">So You’re Scared of Getting a Massage?</a>
                                 <div class="post-content">
                                     <p>Massage is more popular in women than men. The idea of going for a massage
                                         conjures
                                         up
-                                        visions of pas and pampering which many men donât see as being very masculine.
+                                        visions of pas and pampering which many men don’t see as being very masculine.
                                         Has
                                         many
                                         benefits for men too...
@@ -581,12 +793,12 @@
                                     <span>26 <br> DEC</span>
                                 </span>
                                 <div class="post-category">waxing</div>
-                                <a href="#" class="post-title">The Perfect Gift for Motherâs Day</a>
+                                <a href="#" class="post-title">The Perfect Gift for Mother’s Day</a>
                                 <div class="post-content">
                                     <p>Massage is more popular in women than men. The idea of going for a massage
                                         conjures
                                         up
-                                        visions of pas and pampering which many men donât see as being very masculine.
+                                        visions of pas and pampering which many men don’t see as being very masculine.
                                         Has
                                         many
                                         benefits for men too...
@@ -599,12 +811,12 @@
                                     <span>28 <br> DEC</span>
                                 </span>
                                 <div class="post-category">facial</div>
-                                <a href="#" class="post-title">So Youâre Scared of Getting a Massage?</a>
+                                <a href="#" class="post-title">So You’re Scared of Getting a Massage?</a>
                                 <div class="post-content">
                                     <p>Massage is more popular in women than men. The idea of going for a massage
                                         conjures
                                         up
-                                        visions of pas and pampering which many men donât see as being very masculine.
+                                        visions of pas and pampering which many men don’t see as being very masculine.
                                         Has
                                         many
                                         benefits for men too...
@@ -622,7 +834,7 @@
                                     <p>Massage is more popular in women than men. The idea of going for a massage
                                         conjures
                                         up
-                                        visions of pas and pampering which many men donât see as being very masculine.
+                                        visions of pas and pampering which many men don’t see as being very masculine.
                                         Has
                                         many
                                         benefits for men too...
@@ -721,50 +933,52 @@
             </div>
         </div>
     </div>
-    </section>
-    <!-- Top 10 Banner Section End --> 
-    
 
-    <!-- Instagram Section Begin -->
-    <!-- <div class="instagram-photo">
-        <div class="insta-item set-bg" data-setbg="/forUser/img/insta-1.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">colorlib_Collection</a></h5>
-            </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <a href="index.html"><img src="./imgs/footer-logo-white.png" alt="footer-logo"></a>
+            <div class="sub-heading">Design by @CBR-Themes</div>
+            <div class="slogan">Pro inimicus sapientem an, ad cibo velit.</div>
+            <ul class="footer-social">
+                <li class="social-media" style="background-color: #4b64a6;">
+                    <a class="social-popup-icon" target="_blank" href="https://fb.com/Tuannguyentn2504">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="social-media" style="background-color: #0cace4;">
+                    <a class="social-popup-icon" target="_blank" href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-media" style="background-color: #f12756;">
+                    <a class="social-popup-icon" target="_blank" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="insta-item set-bg" data-setbg="/forUser/img/insta-2.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">colorlib_Collection</a></h5>
-            </div>
-        </div>
-        <div class="insta-item set-bg" data-setbg="/forUser/img/insta-3.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">colorlib_Collection</a></h5>
-            </div>
-        </div>
-        <div class="insta-item set-bg" data-setbg="/forUser/img/insta-4.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">colorlib_Collection</a></h5>
-            </div>
-        </div>
-        <div class="insta-item set-bg" data-setbg="/forUser/img/insta-5.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">colorlib_Collection</a></h5>
-            </div>
-        </div>
-        <div class="insta-item set-bg" data-setbg="/forUser/img/insta-6.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">colorlib_Collection</a></h5>
-            </div>
-        </div>
-    </div> -->
-    <!-- Instagram Section End -->
+        <div class="footer-bottom">Copyright © 2019. Natuspa. All Rights Reserved.</div>
+    </footer>
 
+    <!-- modal dialog box popup -->
+    <div class="modal-dialog-box" style="display: none;">
+        <div class="inner">
+            <div class="dialog-img"><img src="./imgs/popup-img.jpg" alt="Dialog Img" style="height: 410px;"></div>
+            <span class="close-icon"><i class="fal fa-times"></i></span>
+            <div class="content">
+                <h5 class="pre-heading">Get Our Most</h5>
+                <h3 class="heading">Exclusive Offers</h3>
+                <p class="sub-heading">Get up to 60% Extra Off Your First Deal Use code WELCOME at checkout for 20%
+                    Extra
+                    Off Local & Getaways, or 10% Extra Off Goods.
+                </p>
+                <form action="#">
+                    <input type="text" placeholder="Your E-mail">
+                    <button class="btn book-now-btn">Subcriber</button>
+                </form>
+            </div>
+        </div>
+    </div>
     
  
